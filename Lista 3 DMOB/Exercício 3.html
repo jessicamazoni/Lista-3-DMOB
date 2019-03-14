@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Exercício 3</title>
+		<meta charset="utf-8" />
+		<script type="text/javascript">
+			function teste(valor){
+				if( valor=="1" ){
+					document.body.style.backgroundColor = 'red';
+				}
+				if( valor=="2" ){
+					document.body.style.backgroundColor = 'green';
+				}
+				if( valor=="3" ){
+					document.body.style.backgroundColor = 'blue';
+				}
+				if( valor=="4" ){
+					document.body.style.backgroundColor = 'yellow';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<select name="teste" id="teste" onchange="teste( this.value );">
+			<option value="">SELECIONE</option>
+			<option value="1">VERMELHO</option>
+			<option value="2">VERDE</option>
+			<option value="3">AZUL</option>
+			<option value="4">AMARELO</option>
+		</select>
+	</body>
+</html>

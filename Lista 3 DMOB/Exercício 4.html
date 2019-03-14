@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Exercício 4</title>
+		<meta charset="utf-8" />
+		<script type="text/javascript">
+			function Mudarestado(muda) {
+		        var display = document.getElementById(muda).style.display;
+		        if(display == "none"){
+           		 document.getElementById(muda).style.display = 'block';
+		        }
+        		else{
+            		document.getElementById(muda).style.display = 'none';
+            	}
+    		}
+		</script>
+	</head>
+	<body>
+		<p id="paragrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quasi minima atque, asperiores, explicabo laborum! Maxime voluptates doloremque dolorum. Aliquam, veritatis neque. Necessitatibus aut, sed maiores dignissimos. Temporibus, quibusdam, earum.</p>
+		<button type="button" onclick="Mudarestado('paragrafo')">Ocultar/Mostrar</button>
+	</body>
+</html>

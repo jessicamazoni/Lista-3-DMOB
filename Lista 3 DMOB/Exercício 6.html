@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercício 6</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="CSS/estilo.css" />
+    <script type="text/javascript">
+      var fraseP = prompt("Escreva uma palavra");
+      function frase(fraseP){
+        fraseP= fraseP.toLowerCase().replace(/\s/g,"");
+        fraserReversa = fraseP.split("").reverse().toString();
+        for (var i = 0; i < ((fraserReversa.length)-1); i++) {
+          fraserReversa = fraserReversa.replace(",","");
+        };
+        if(fraseP == fraserReversa){
+          resultado = "é palíndromo.";
+        }
+        else{
+          resultado = "não é palíndromo.";
+        } 
+        document.write("Sua palavra " + resultado);
+      }
+      frase(fraseP);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Exercício 8</title>
+    <meta charset="utf-8" />
+    <script>
+      function disabledInputs() {
+        var pessoa = document.querySelector('input[name=j1]:checked').value;
+        var cpf = document.querySelector('input[name=cpf]');
+        var cnpj = document.querySelector('input[name=cnpj]');
+        var data = document.querySelector('input[name=data]');
+        if (j1 == "F") {
+          cpf.disabled = false;
+          data.disabled = false;
+          cnpj.disabled = true;
+        } 
+        else {
+          cnpj.disabled = false;
+          cpf.disabled = true;
+          data.disabled = true;
+        }
+      }
+      function onlyNumbers(e) {
+        var key = e.charCode;
+        if((key >= 48 && key <= 57)) {
+          return true;
+        } 
+        else {
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form action="">
+      <label for="nome">Nome:</label>
+      <input type = "text"  name="nome" />
+      <br><br>
+      <label for="j1">Pessoa:</label>
+      <input type="radio" name="j1" onclick="disabledInputs()" value="F" />Fisica 
+      <input type ="radio" name="j1" onclick="disabledInputs()" value="J" />Juridica
+      <br><br>
+      <label for="cpf">CPF:</label>
+      <input type="text"  name="cpf" disabled>
+      <br><br>
+      <label for="cnpj">CNPJ:</label>
+      <input type="text" name="cnpj" disabled>
+      <br><br>
+      <label for="data">Data de Nascimento:</label>
+      <input type="text" name="data" onkeypress="returnonlyNumbers(event)" />
+      <br><br>
+      <label for="end">Endereço:</label>
+      <input type="text"  name="end" />
+      <br><br>
+      <label for="CEP">CEP:</label>
+      <input type="text" name="CEP" onkeypress="return onlyNumbers(event)"/>
+      <br><br>
+      <label for="tel">Telefone:</label>
+      <input type="text" name="tel" />
+      <br><br>
+      <label for="email">Email:</label>
+      <input type="text" name="email" />
+      <br><br>
+      <button type="button" name="button">Cadastrar</button>
+    </form>
+  </body>
+</html>
+
+
+
+
